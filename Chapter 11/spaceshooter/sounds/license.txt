@@ -1,0 +1,13 @@
+space_gun.wav
+------------
+This work is licensed under the Creative Commons 0 License.
+Original sound created by morganpurkis, modified by Stewart Watkiss
+https://freesound.org/s/392228/
+
+
+asteroid_explode.wav and space_crash.wav
+----------------------------------------
+This work is licensed under the Creative Commons 0 License.
+Original sound created by morganpurkis, modified by Stewart Watkiss
+https://freesound.org/s/394127/
+ 

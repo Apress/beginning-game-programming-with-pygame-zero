@@ -1,0 +1,30 @@
+# Example tune for Sonic-Pi
+tune1_notes = (ring :c4, :d4, :e4, :f4, :g4, :f4, :d4, :c3)
+dsaw_notes = (ring :e4, :r, :g4, :r, :a4, :b4, :r, :a4, :b4, :r, :d5, :r, :b4, :d5, :r, :b4, :r,  :e4, :r, :g4, :r, :a4, :b4, :r, :a4, :b4, :r, :d5, :r, :b4, :d5, :r, :b4, :r, :g4, :r, :e4, :r, :e4, :r, :e4, :r, :g4, :r)
+piano_notes = (ring :r, :f4, :r, :a4, :r, :g4, :r, :b4)
+
+with_fx :reverb, room: 1, mix: 0.3 do
+  live_loop :tune1 do
+    8.times do
+      tick
+      play tune1_notes.look, release: 0.1, amp: 0.6
+      sleep 0.25
+    end
+  end
+end
+
+with_fx :echo do
+  live_loop :dsaw do
+    use_synth :mod_dsaw
+    play dsaw_notes.look, attack: 0.2, release: 0.1, amp: 0.05
+    sleep 0.125
+  end
+end
+
+with_fx :flanger do
+  live_loop :piano do
+    use_synth :piano
+    play piano_notes.look, attack: 0.2, release: 0.1, amp: 0.5
+    sleep 0.125
+  end
+end

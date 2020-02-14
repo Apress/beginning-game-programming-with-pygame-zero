@@ -1,0 +1,14 @@
+piano_notes = (ring :r, :c4, :e4, :f4, :g4, :r, :r, :r,
+               :r, :c4, :e4, :f4, :g4, :r, :r, :r,
+               :r, :c4, :e4, :f4, :g4, :e4, :c4, :e4,
+               :d4, :r, :r, :e4, :e4, :d4, :c4, :c4,
+               :e4, :g4, :g4, :g4, :f4, :r, :r, :e4,
+               :f4, :g4, :e4, :c4, :d4, :c4)
+
+
+live_loop :piano do
+  use_synth :piano
+  tick
+  play piano_notes.look, attack: 0.2, release: 0.1, amp: 0.5
+  sleep 0.25
+end
