@@ -8,5 +8,4 @@ class Ball():
         
         
     def draw(self, screen):
-        if (self.show == True):
-            screen.draw.filled_circle(self.position, self.radius, self.color) 
+        screen.draw.filled_circle(self.position, self.radius, self.color) 
