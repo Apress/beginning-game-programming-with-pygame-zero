@@ -1,5 +1,5 @@
 class Ball():
-    show = True
+    shape = "Sphere"
     
     def __init__(self, position, radius, color):
         self.position = position
